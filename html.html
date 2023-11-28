@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>kalkulator Sederhana</title>
+  <title>kalkulator JS</title>
 </head>
 <body background="pink">
+  
   <label for="input1">Input nilai 1:</label>
     <input type="text" placeholder="MASUKIN BROW" id="input1"><br><br>
   <label>input nilai 2:</label>
     <input type="text" placeholder="MASUKIN BROW" id="input2"><br><br>
-  <label>Pilih fungsi:</label><br>
+  
+    <label>Pilih fungsi:</label><br>
     <input type="radio" name="operator" id="tambah" onclick="tambah()">tambah<br>
     <input type="radio" name="operator" id="kurang" onclick="kurang()">kurang<br>
     <input type="radio" name="operator" id="kali" onclick="kali()">kali<br>
@@ -19,6 +21,7 @@
   <label>Hasil:</label>
     <input type="text" placeholder="hasil nya disini brow" id="hasil" disabled>
     <input type="button" value="RESET" onclick="reset()">  
+    
     <script>
       function ambilNilai()
       {
