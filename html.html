@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kalkulator Sederhana</title>
+</head>
+<body bgcolor="pink">
+  <label for="input1">Input nilai 1:</label>
+    <input type="text" placeholder="MASUKIN BROW" id="input1"><br><br>
+  <label>input nilai 2:</label>
+    <input type="text" placeholder="MASUKIN BROW" id="input2"><br><br>
+  <label>Pilih fungsi:</label><br>
+    <input type="radio" name="operator" id="tambah" onclick="tambah()">tambah<br>
+    <input type="radio" name="operator" id="kurang" onclick="kurang()">kurang<br>
+    <input type="radio" name="operator" id="kali" onclick="kali()">kali<br>
+    <input type="radio" name="operator" id="bagi" onclick="bagi()">bagi<br><br>
+  <label>Hasil:</label>
+    <input type="text" placeholder="hasil nya disini brow" id="hasil" disabled>
+    <input type="button" value="RESET" onclick="reset()">  
+    <script>
+      function ambilNilai()
+      {
+        satu = document.getElementById('input1').value;
+        dua = document.getElementById('input2').value;
+        if (satu == '' || dua == '')
+        {
+          return alert('gaboleh kosong masbro');
+        } else 
+        {
+          nilai = [satu,dua];
+          return nilai;
+        }
+      }
+
+      function printHasil(output)
+      {
+        hasil = document.getElementById('hasil');
+        return hasil.value = output;
+      }
+
+      function reset()
+      {
+       document.getElementById("hasil").value  = ""
+      }
+
+      function tambah()
+      {
+        let nilai = ambilNilai();
+        let prosesTambah = 0;
+        for (let a = 0; a < nilai.length; a++)
+        {
+          prosesTambah += parseInt(nilai[a]);
+        }
+        // console.log(prosesTambah);
+        return printHasil(prosesTambah);
+      }
+
+      function kurang()
+      {
+        let angka1 = document.getElementById("input1").value;
+        let angka2 = document.getElementById("input2").value;
+        let hasile = angka1 - angka2
+        document.getElementById("hasil").innerHTML = hasile;  
+      }
+
+      function kali()
+      {
+        nilai = ambilNilai();
+        console.log(nilai);
+      }
+
+      function bagi()
+      {
+        nilai = ambilNilai();
+        console.log(nilai);
+      }
+    </script>
+</body>
+</html>
